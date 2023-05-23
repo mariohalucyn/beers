@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import Button from '../atoms/Button';
+import Footer from './Footer';
 
 const StyledWrapper = styled.div `
+	padding: 62px 0;
 	margin: 0 auto;
 	width: 1200px;
 `;
@@ -45,23 +47,26 @@ const Shop = () => {
 	}, []);
 
 	return (
-		<StyledWrapper>
-			<BeersList>
-				{items.map(({ id, name, brewers_tips, image_url, tagline }) => (
-					<BeersListItem key={id}>
-						<div>
-							<h1>{name}</h1>
-							<h3>{tagline}</h3>
-						</div>
-						<img src={image_url} alt={name} />
-						<div>
-							<p>{brewers_tips}</p>
-							<Button title={'buy'} />
-						</div>
-					</BeersListItem>
-				))}
-			</BeersList>
-		</StyledWrapper>
+		<>
+			<StyledWrapper>
+				<BeersList>
+					{items.map(({ id, name, brewers_tips, image_url, tagline }) => (
+						<BeersListItem key={id}>
+							<div>
+								<h1>{name}</h1>
+								<h3>{tagline}</h3>
+							</div>
+							<img src={image_url} alt={name} />
+							<div>
+								<p>{brewers_tips}</p>
+								<Button title={'buy'} />
+							</div>
+						</BeersListItem>
+					))}
+				</BeersList>
+			</StyledWrapper>
+			<Footer />
+		</>
 	);
 };
 
