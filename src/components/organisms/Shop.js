@@ -3,32 +3,31 @@ import styled from 'styled-components';
 import Button from '../atoms/Button';
 
 const StyledWrapper = styled.div `
+	margin: 0 auto;
 	width: 1200px;
-	margin: auto;
-	padding: 0;
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	grid-template-rows: auto;
-	gap: 42px;
 `;
 
 const BeersList = styled.ul `
-	margin: 0;
-	padding: 0 16px;
-	display: grid;
-	grid-template-columns: auto;
-	grid-template-rows: 1fr 2fr 1fr;
+	padding: 0;
+	margin: 0 auto;
 	list-style-type: none;
-	border-radius: 20px;
-	background-color: ${({ theme }) => theme.colors.lightGray };
-	box-shadow: 6px 6px 15px rgba(0,0,0,0.2)
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: auto;
+	gap: 32px;
 `;
 
 const BeersListItem = styled.li `
-	justify-items: center;
-	justify-self: center;
+	padding: 24px;
+	margin: 0;
+	display: grid;
+	grid-template-rows: 1fr 2fr;
+	border-radius: 20px;
+	background-color: ${({ theme }) => theme.colors.lightGray};
+
 	img {
 		width: 80px;
+		margin: auto;
 	}
 `;
 
@@ -47,21 +46,21 @@ const Shop = () => {
 
 	return (
 		<StyledWrapper>
-			{items.map(({ id, name, brewers_tips, image_url, tagline }) => (
-				<BeersList key={id}>
-					<div>
-						<h1>{name}</h1>
-						<h3>{tagline}</h3>
-					</div>
-					<BeersListItem>
+			<BeersList>
+				{items.map(({ id, name, brewers_tips, image_url, tagline }) => (
+					<BeersListItem key={id}>
+						<div>
+							<h1>{name}</h1>
+							<h3>{tagline}</h3>
+						</div>
 						<img src={image_url} alt={name} />
+						<div>
+							<p>{brewers_tips}</p>
+							<Button title={'buy'} />
+						</div>
 					</BeersListItem>
-					<BeersListItem>
-						<p>{brewers_tips}</p>
-						<Button title={'buy'} />
-					</BeersListItem>
-				</BeersList>
-			))}
+				))}
+			</BeersList>
 		</StyledWrapper>
 	);
 };
