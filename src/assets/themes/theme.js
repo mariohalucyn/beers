@@ -1,6 +1,6 @@
 export const theme = {
 	colors: {
 		white: 'rgb(255,255,255)',
-		red: 'rgb(255, 0, 0)'
+		lightGray: 'rgb(250, 250, 250)'
 	}
 };
