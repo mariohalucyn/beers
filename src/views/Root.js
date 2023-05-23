@@ -1,8 +1,15 @@
 import React from 'react';
 import Shop from '../components/organisms/Shop';
+import styled from 'styled-components';
+
+const StyledWrapper = styled.html `
+	color: ${({ theme })=> theme.colors.black}
+`;
 
 const Root = () => (
-	<Shop />
+	<StyledWrapper>
+		<Shop />
+	</StyledWrapper>
 );
 
 export default Root;

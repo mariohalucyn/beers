@@ -9,7 +9,7 @@ const StyledWrapper = styled.div `
 	width: 1200px;
 `;
 
-const BeersList = styled.ul `
+const StyledList = styled.ul `
 	padding: 0;
 	margin: 0 auto;
 	list-style-type: none;
@@ -19,7 +19,7 @@ const BeersList = styled.ul `
 	gap: 32px;
 `;
 
-const BeersListItem = styled.li `
+const StyledListItem = styled.li `
 	padding: 24px;
 	margin: 0;
 	display: grid;
@@ -49,9 +49,9 @@ const Shop = () => {
 	return (
 		<>
 			<StyledWrapper>
-				<BeersList>
+				<StyledList>
 					{items.map(({ id, name, brewers_tips, image_url, tagline }) => (
-						<BeersListItem key={id}>
+						<StyledListItem key={id}>
 							<div>
 								<h1>{name}</h1>
 								<h3>{tagline}</h3>
@@ -61,9 +61,9 @@ const Shop = () => {
 								<p>{brewers_tips}</p>
 								<Button title={'buy'} />
 							</div>
-						</BeersListItem>
+						</StyledListItem>
 					))}
-				</BeersList>
+				</StyledList>
 			</StyledWrapper>
 			<Footer />
 		</>
