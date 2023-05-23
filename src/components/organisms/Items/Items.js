@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import Button from '../../atoms/Button/Button';
+import { fetchApi } from '../../../helpers/api';
 
 const StyledWrapper = styled.div `
 	width: 1200px;
@@ -37,47 +38,33 @@ const StyledListItem = styled.li `
 	img {
 		width: 80px;
 		margin: auto;
-	}
+    }
 `;
 
 const Items = () => {
-	const [items, setItems] = useState([]);
-
-	useEffect(() => {
-		fetch('https://api.punkapi.com/v2/beers')
-			.then(response => {
-				return response.json();
-			})
-			.then(data => {
-				setItems(data);
-			});
-	}, []);
-
-	console.log(items);
+	const beers = fetchApi('https://api.punkapi.com/v2/beers');
 
 	return (
-		<>
-			<StyledWrapper>
-				<StyledList>
-					{items.map(({ id, name, brewers_tips, image_url, tagline, abv }) => (
-						<StyledListItem key={id}>
-							<div>
-								<h1>{name}</h1>
-								<h3>{tagline}</h3>
+		<StyledWrapper>
+			<StyledList>
+				{beers.map(({ id, name, brewers_tips, image_url, tagline, abv }) => (
+					<StyledListItem key={id}>
+						<div>
+							<h1>{name}</h1>
+							<h3>{tagline}</h3>
+						</div>
+						<img src={image_url} alt={name} />
+						<div>
+							<p>{brewers_tips}</p>
+							<div className={'price'}>
+								<h1>{abv}%</h1>
+								<Button title={'read'} />
 							</div>
-							<img src={image_url} alt={name} />
-							<div>
-								<p>{brewers_tips}</p>
-								<div className={'price'}>
-									<h1>{abv}%</h1>
-									<Button title={'read'} />
-								</div>
-							</div>
-						</StyledListItem>
-					))}
-				</StyledList>
-			</StyledWrapper>
-		</>
+						</div>
+					</StyledListItem>
+				))}
+			</StyledList>
+		</StyledWrapper>
 	);
 };
 
