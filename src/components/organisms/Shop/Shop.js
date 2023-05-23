@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
-import Button from '../atoms/Button';
-import Footer from './Footer';
+import Button from '../../atoms/Button/Button';
+import Footer from '../Footer/Footer';
+import Header from '../Header/Header';
 
 const StyledWrapper = styled.div `
 	width: 1200px;
@@ -49,6 +50,7 @@ const Shop = () => {
 
 	return (
 		<>
+			<Header />
 			<StyledWrapper>
 				<StyledList>
 					{items.map(({ id, name, brewers_tips, image_url, tagline }) => (
