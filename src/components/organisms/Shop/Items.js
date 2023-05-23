@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import Button from '../../atoms/Button/Button';
-import Footer from '../Footer/Footer';
-import Header from '../Header/Header';
 
 const StyledWrapper = styled.div `
 	width: 1200px;
@@ -17,7 +15,7 @@ const StyledList = styled.ul `
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	grid-template-rows: auto;
-	gap: 32px;
+	gap: 42px;
 `;
 
 const StyledListItem = styled.li `
@@ -28,14 +26,21 @@ const StyledListItem = styled.li `
 	justify-content: space-between;
 	border-radius: 20px;
 	background-color: ${({ theme }) => theme.colors.lightGray};
+	box-shadow: 3px 5px 15px rgba(0, 0, 0, 0.15);
 
+	.price {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	
 	img {
 		width: 80px;
 		margin: auto;
 	}
 `;
 
-const Shop = () => {
+const Items = () => {
 	const [items, setItems] = useState([]);
 
 	useEffect(() => {
@@ -48,12 +53,13 @@ const Shop = () => {
 			});
 	}, []);
 
+	console.log(items);
+
 	return (
 		<>
-			<Header />
 			<StyledWrapper>
 				<StyledList>
-					{items.map(({ id, name, brewers_tips, image_url, tagline }) => (
+					{items.map(({ id, name, brewers_tips, image_url, tagline, abv }) => (
 						<StyledListItem key={id}>
 							<div>
 								<h1>{name}</h1>
@@ -62,15 +68,17 @@ const Shop = () => {
 							<img src={image_url} alt={name} />
 							<div>
 								<p>{brewers_tips}</p>
-								<Button title={'buy'} />
+								<div className={'price'}>
+									<h1>{abv}%</h1>
+									<Button title={'read'} />
+								</div>
 							</div>
 						</StyledListItem>
 					))}
 				</StyledList>
 			</StyledWrapper>
-			<Footer />
 		</>
 	);
 };
 
-export default Shop;
+export default Items;

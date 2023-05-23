@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { ReactComponent as Account } from '../../../assets/icons/account.svg';
 
 const StyledWrapper = styled.div `
 	background-color: ${({ theme }) => theme.colors.lightGray};
@@ -20,20 +21,28 @@ const StyledList = styled.ul `
 	list-style-type: none;
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
 `;
 
 const StyledListItem = styled.li `
 	font-size: 20px;
 	font-weight: bold;
 	color: ${({ theme }) => theme.colors.black};
+	
+	svg {
+		width: 32px;
+		height: 32px;
+		fill: ${({ theme }) => theme.colors.black};
+	}
 `;
 
 const Header = () => (
 	<StyledWrapper>
 		<StyledList>
-			<StyledListItem>left</StyledListItem>
 			<StyledListItem>logo</StyledListItem>
-			<StyledListItem>right</StyledListItem>
+			<StyledListItem>
+				<Account />
+			</StyledListItem>
 		</StyledList>
 	</StyledWrapper>
 );
