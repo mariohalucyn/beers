@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 
 const StyledWrapper = styled.div `
@@ -14,7 +14,7 @@ const BeersList = styled.ul `
 	display: flex;
 	flex-direction: column;
 	list-style-type: none;
-	background-color: gray;
+	background-color: ${({ theme }) =>theme.colors.red }
 `;
 
 const Shop = () => {
@@ -32,7 +32,7 @@ const Shop = () => {
 
 	return (
 		<StyledWrapper>
-			{items.map(({id, name, brewers_tips, image_url, tagline}) => (
+			{items.map(({ id, name, brewers_tips, image_url, tagline }) => (
 				<BeersList key={id}>
 					<li>{name}</li>
 					<li>{tagline}</li>
