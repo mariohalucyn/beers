@@ -58,7 +58,9 @@ const Items = () => {
 							<p>{brewers_tips}</p>
 							<div className={'price'}>
 								<h1>{abv}%</h1>
-								<Button title={'read'} />
+								<a href="">
+									<Button title={'read'} />
+								</a>
 							</div>
 						</div>
 					</StyledListItem>
