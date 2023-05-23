@@ -4,9 +4,9 @@ import Button from '../atoms/Button';
 import Footer from './Footer';
 
 const StyledWrapper = styled.div `
+	width: 1200px;
 	padding: 62px 0;
 	margin: 0 auto;
-	width: 1200px;
 `;
 
 const StyledList = styled.ul `
@@ -22,8 +22,9 @@ const StyledList = styled.ul `
 const StyledListItem = styled.li `
 	padding: 24px;
 	margin: 0;
-	display: grid;
-	grid-template-rows: 1fr 2fr;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 	border-radius: 20px;
 	background-color: ${({ theme }) => theme.colors.lightGray};
 
