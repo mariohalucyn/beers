@@ -13,7 +13,9 @@ const StyledList = styled.ul `
 `;
 
 const StyledListItem = styled.li`
-
+	display: flex;
+	flex-direction: column;
+	gap: 64px;
 `;
 
 const Overview = styled.div `
@@ -21,7 +23,9 @@ const Overview = styled.div `
 	grid-template-columns: repeat(2, 1fr);
 `;
 
-const Description = styled.div ``;
+const Description = styled.div `
+display: flex;
+flex-direction: column`;
 
 const Image = styled.div `
   display: flex;
@@ -31,6 +35,12 @@ const Image = styled.div `
     height: 500px;
   }
 `;
+
+const FoodList = styled.ul `
+list-style-type: none
+`;
+
+const FoodListItem = styled.li ``;
 
 const Item = () => {
 	const item = fetchApi('https://api.punkapi.com/v2/beers/2');
@@ -47,13 +57,20 @@ const Item = () => {
 							<div>
 								<h1>{name}</h1>
 								<h3>{tagline}</h3>
-								<p>{description}</p>
+								<strong>First brewed {first_brewed}</strong>
+								<p>{brewers_tips}</p>
 							</div>
 						</Overview>
 						<Description>
-							<strong>{first_brewed}</strong>
-							<p>{food_pairing}</p>
-							<p>{brewers_tips}</p>
+							<h1>PAIRING FOOD</h1>
+							<FoodList>
+								{food_pairing.map((food) => (
+									<FoodListItem key={id}>{food}</FoodListItem>
+								))}
+							</FoodList>
+							<h1>DESCRIPTION</h1>
+							<p>{description}</p>
+							<h1>CONTRIBUTED BY</h1>
 							<p>{contributed_by}</p>
 						</Description>
 					</StyledListItem>
