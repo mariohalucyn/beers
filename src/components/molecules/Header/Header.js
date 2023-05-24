@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { ReactComponent as Account } from '../../../assets/icons/account.svg';
 
 const StyledWrapper = styled.div `
+	margin: 0 auto;
 	background-color: ${({ theme }) => theme.colors.lightGray};
 
 	&::after {
@@ -15,13 +16,17 @@ const StyledWrapper = styled.div `
 `;
 
 const StyledList = styled.ul `
-	padding: 32px;
-	margin: 0 auto;
-	width: 1200px;
 	list-style-type: none;
+	padding: 32px;
+	margin: 0;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	
+	@media(min-width: 1200px) {
+		width: 1200px;
+		margin: 0 auto;
+	}
 `;
 
 const StyledListItem = styled.li `

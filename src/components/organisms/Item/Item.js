@@ -16,7 +16,7 @@ const StyledList = styled.ul `
 const StyledListItem = styled.li`
 	display: flex;
 	flex-direction: column;
-	gap: 64px;
+	gap: 86px;
 `;
 
 const Overview = styled.div `
@@ -83,7 +83,7 @@ const Item = () => {
 									<h2>PAIRING FOOD</h2>
 									<FoodList>
 										{food_pairing.map((food) => (
-											<FoodListItem key={id}>{food}</FoodListItem>
+											<FoodListItem key={food_pairing}>{food}</FoodListItem>
 										))}
 									</FoodList>
 								</div>
