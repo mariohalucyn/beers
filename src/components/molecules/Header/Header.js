@@ -15,8 +15,8 @@ const StyledWrapper = styled.div `
 `;
 
 const StyledList = styled.ul `
-	margin: 0 auto;
 	padding: 32px;
+	margin: 0 auto;
 	width: 1200px;
 	list-style-type: none;
 	display: flex;
