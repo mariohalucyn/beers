@@ -61,20 +61,20 @@ const ImageDescription = styled.div `
 `;
 
 const Item = () => {
-	const item = fetchApi('https://api.punkapi.com/v2/beers/10');
+	const item = fetchApi('https://api.punkapi.com/v2/beers/4');
 
 	return (
 		<StyledWrapper>
 			<StyledList>
-				{item.map(({ brewers_tips, contributed_by, description, first_brewed, food_pairing, id, image_url, name, tagline }) => (
+				{item.map(({ abv, brewers_tips, contributed_by, description, first_brewed, food_pairing, id, image_url, name, tagline }) => (
 					<StyledListItem key={id}>
 						<Overview>
 							<Image>
-								<img src={image_url} alt=""/>
+								<img src={image_url} alt={name}/>
 							</Image>
 							<ImageDescription>
 								<div>
-									<h1>{name.toUpperCase()}</h1>
+									<h1>{name.toUpperCase()} - {abv}%</h1>
 									<h3>{tagline}</h3>
 									<strong>First brewed - {first_brewed}.</strong>
 									<p>{brewers_tips}</p>
