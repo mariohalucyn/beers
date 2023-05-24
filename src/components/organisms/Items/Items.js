@@ -25,6 +25,7 @@ const StyledListItem = styled.li `
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+	gap: 24px;
 	border-radius: 20px;
 	background-color: ${({ theme }) => theme.colors.lightGray};
 	box-shadow: 3px 5px 15px rgba(0, 0, 0, 0.15);
