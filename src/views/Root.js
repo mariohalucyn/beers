@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Product from '../components/organisms/Product/Product';
+import Product from '../components/templates/Product';
 
 const StyledWrapper = styled.html `
 	color: ${({ theme }) => theme.colors.black}
