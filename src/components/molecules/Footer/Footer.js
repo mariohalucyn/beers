@@ -27,18 +27,29 @@ const StyledList = styled.ul `
 const StyledListItem = styled.li `
 	padding: 2px;
 	color: ${({ theme }) => theme.colors.black};
+	
+	a {
+		text-decoration: none;
+		color: ${({ theme }) => theme.colors.black};
+	}
 `;
 
 const Footer = () => (
 	<StyledWrapper>
 		<StyledList>
-			<StyledListItem>Statue</StyledListItem>
-			<StyledListItem>Privacy policy</StyledListItem>
-			<StyledListItem>Contact</StyledListItem>
+			<StyledListItem>
+				<a href="">Statue</a>
+			</StyledListItem>
+			<StyledListItem>
+				<a href="">Privacy policy</a>
+			</StyledListItem>
+			<StyledListItem>
+				<a href="">Contact</a>
+			</StyledListItem>
 		</StyledList>
 		<StyledList>
 			<StyledListItem>
-                © 2023 Beers
+				<strong>© 2023 Beers</strong>
 			</StyledListItem>
 		</StyledList>
 	</StyledWrapper>

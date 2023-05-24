@@ -1,7 +1,7 @@
 import React from 'react';
-import Header from '../organisms/Header/Header';
-import Footer from '../organisms/Footer/Footer';
-import Items from '../organisms/Shop/Items';
+import Header from '../molecules/Header/Header';
+import Footer from '../molecules/Footer/Footer';
+import Items from '../organisms/Items/Items';
 
 const List = () => (
 	<>
