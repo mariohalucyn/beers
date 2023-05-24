@@ -48,7 +48,7 @@ const Items = () => {
 	return (
 		<StyledWrapper>
 			<StyledList>
-				{beers.map(({ id, name, brewers_tips, image_url, tagline, abv }) => (
+				{beers.map(({ abv, brewers_tips, id, image_url, name, tagline }) => (
 					<StyledListItem key={id}>
 						<div>
 							<h1>{name}</h1>

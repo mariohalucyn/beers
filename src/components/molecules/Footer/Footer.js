@@ -2,8 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const StyledWrapper = styled.div `
-	position: relative;
-	margin: 0;
+	margin: 0 auto;
 	display: flex;
 	flex-direction: column;
 	background-color: ${({ theme }) => theme.colors.lightGray};
@@ -18,10 +17,18 @@ const StyledWrapper = styled.div `
 `;
 
 const StyledList = styled.ul `
-	margin: 0 auto;
-	padding: 64px;
-	width: 1200px;
 	list-style-type: none;
+	height: 200px;
+	padding: 32px;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	
+	@media(min-width: 1200px) {
+		width: 1200px;
+		margin: 0 auto;
+	}
 `;
 
 const StyledListItem = styled.li `
