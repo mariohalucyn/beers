@@ -43,7 +43,7 @@ const Image = styled.div `
 	margin: auto; 
 	
 	img {
-		height: 500px;
+		height: 600px;
 	}
 `;
 
@@ -71,7 +71,7 @@ const Item = () => {
 					<StyledListItem key={id}>
 						<Overview>
 							<Image>
-								<img src={image_url} alt=""/>
+								<img src={image_url} alt={name} />
 							</Image>
 							<ImageDescription>
 								<div>

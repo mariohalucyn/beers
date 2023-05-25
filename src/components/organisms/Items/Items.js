@@ -4,19 +4,28 @@ import Button from '../../atoms/Button/Button';
 import { fetchApi } from '../../../helpers/api';
 
 const StyledWrapper = styled.div `
-	width: 1200px;
-	padding: 62px 0;
-	margin: 0 auto;
+	padding: 0;
 `;
 
 const StyledList = styled.ul `
-	padding: 0;
+	max-width: 400px;
+	padding: 64px 16px;
 	margin: 0 auto;
 	list-style-type: none;
 	display: grid;
-	grid-template-columns: repeat(3, 1fr);
+	grid-template-columns: 1fr;
 	grid-template-rows: auto;
 	gap: 42px;
+	
+	@media (min-width: 768px) {
+		max-width: 800px;
+		grid-template-columns: repeat(2, 1fr);
+	}
+	
+	@media (min-width: 1200px) {
+		max-width: 1200px;
+		grid-template-columns: repeat(3, 1fr);
+	}
 `;
 
 const StyledListItem = styled.li `

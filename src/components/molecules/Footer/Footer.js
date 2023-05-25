@@ -19,7 +19,7 @@ const StyledWrapper = styled.div `
 const StyledList = styled.ul `
 	list-style-type: none;
 	height: 200px;
-	padding: 0;
+	padding: 0 32px;
 	margin: 0;
 	display: flex;
 	flex-direction: column;

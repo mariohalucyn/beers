@@ -18,7 +18,7 @@ const StyledWrapper = styled.div `
 const StyledList = styled.ul `
 	list-style-type: none;
 	padding: 32px;
-	margin: 0;
+	margin: 0 auto;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
