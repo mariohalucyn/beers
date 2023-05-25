@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import Product from '../components/templates/Product';
+// import Product from '../components/templates/Product';
+import List from '../components/templates/List';
 
 const StyledWrapper = styled.html `
 	color: ${({ theme }) => theme.colors.black}
@@ -8,7 +9,7 @@ const StyledWrapper = styled.html `
 
 const Root = () => (
 	<StyledWrapper>
-		<Product />
+		<List />
 	</StyledWrapper>
 );
 

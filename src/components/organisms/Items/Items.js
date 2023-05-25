@@ -60,7 +60,7 @@ const Items = () => {
 							<div className={'price'}>
 								<h1>{abv}%</h1>
 								<a href="">
-									<Button title={'read'} />
+									<Button>buy</Button>
 								</a>
 							</div>
 						</div>

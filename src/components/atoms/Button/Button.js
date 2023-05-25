@@ -9,14 +9,14 @@ const StyledButton = styled.button `
 	font-weight: bold;
 	color: ${({ theme }) => theme.colors.black};
 `;
-const Button = ({ title }) => (
+const Button = ({ children }) => (
 	<StyledButton>
-		{title}
+		{children}
 	</StyledButton>
 );
 
 Button.propTypes = {
-	title: PropTypes.string,
+	children: PropTypes.string,
 };
 
 export default Button;
