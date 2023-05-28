@@ -16,6 +16,7 @@ import {
 
 const Item = ({ id }) => {
 	const item = fetchApi(`https://api.punkapi.com/v2/beers/${id}`);
+	
 	return (
 		<StyledWrapper>
 			<StyledList>

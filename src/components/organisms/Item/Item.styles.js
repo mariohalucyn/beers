@@ -8,13 +8,13 @@ export const StyledList = styled.ul `
 	list-style-type: none;
 	width: 1200px;
 	padding: 0;
-	margin: 0 auto;
+	margin: auto;
 `;
 
 export const StyledListItem = styled.li`
 	display: flex;
 	flex-direction: column;
-	gap: 86px;
+	gap: 72px;
 `;
 
 export const Overview = styled.div `
@@ -55,5 +55,4 @@ export const FoodListItem = styled.li ``;
 export const ImageDescription = styled.div `
 	display: flex;
 	flex-direction: column;
-	gap: 32px;
 `;

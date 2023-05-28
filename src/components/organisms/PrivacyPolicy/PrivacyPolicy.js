@@ -1,9 +1,6 @@
 import React from 'react';
-import styled from 'styled-components';
+import { StyledWrapper } from './PrivacyPolicy.styles';
 
-const StyledWrapper = styled.div `
-    
-`;
 const PrivacyPolicy = () => (
 	<StyledWrapper>
 		<h1>Why we process your information</h1>

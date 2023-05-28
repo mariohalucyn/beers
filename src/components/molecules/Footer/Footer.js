@@ -9,7 +9,7 @@ const Footer = () => (
 				<Link to='privacy-policy' >Privacy policy</Link>
 			</StyledListItem>
 			<StyledListItem>
-				<a href="">Contact</a>
+				<Link to='contact' >Contact</Link>
 			</StyledListItem>
 		</StyledList>
 		<StyledList>

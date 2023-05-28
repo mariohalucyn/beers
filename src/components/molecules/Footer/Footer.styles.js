@@ -24,7 +24,7 @@ export const StyledList = styled.ul `
 	
 	@media(min-width: 1200px) {
 		width: 1200px;
-		margin: 0 auto;
+		margin: auto;
 	}
 `;
 
