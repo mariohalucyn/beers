@@ -63,7 +63,6 @@ const ImageDescription = styled.div `
 
 const Item = (props) => {
 	const item = fetchApi(`https://api.punkapi.com/v2/beers/${props.id}`);
-	console.log(item);
 
 	return (
 		<StyledWrapper>

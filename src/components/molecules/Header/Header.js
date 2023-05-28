@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import { ReactComponent as Account } from '../../../assets/icons/account.svg';
 import { Link } from 'react-router-dom';
 
 const StyledWrapper = styled.div `
@@ -53,9 +52,6 @@ const Header = () => (
 		<StyledList>
 			<StyledListItem>
 				<Link className={'logo'} to='/'>Beers</Link>
-			</StyledListItem>
-			<StyledListItem>
-				<Account />
 			</StyledListItem>
 		</StyledList>
 	</StyledWrapper>

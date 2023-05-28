@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 const StyledWrapper = styled.div `
 	margin: 0 auto;
@@ -45,10 +46,7 @@ const Footer = () => (
 	<StyledWrapper>
 		<StyledList>
 			<StyledListItem>
-				<a href="">Statue</a>
-			</StyledListItem>
-			<StyledListItem>
-				<a href="">Privacy policy</a>
+				<Link to='privacy-policy' >Privacy policy</Link>
 			</StyledListItem>
 			<StyledListItem>
 				<a href="">Contact</a>
