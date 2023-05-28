@@ -1,6 +1,7 @@
 import React from 'react';
 import { fetchApi } from '../../../helpers/api';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 const StyledWrapper = styled.div `
 	padding: 72px;
@@ -60,8 +61,8 @@ const ImageDescription = styled.div `
 	gap: 32px;
 `;
 
-const Item = () => {
-	const item = fetchApi('https://api.punkapi.com/v2/beers/10');
+const Item = (props) => {
+	const item = fetchApi(`https://api.punkapi.com/v2/beers/${props.id}`);
 	console.log(item);
 
 	return (
@@ -101,6 +102,10 @@ const Item = () => {
 			</StyledList>
 		</StyledWrapper>
 	);
+};
+
+Item.propTypes = {
+	id: PropTypes.string,
 };
 
 export default Item;

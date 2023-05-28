@@ -1,14 +1,14 @@
 import React from 'react';
 import Header from '../molecules/Header/Header';
 import Footer from '../molecules/Footer/Footer';
-import Items from '../organisms/Items/Items';
+import Item from '../organisms/Item/Item';
 
-const Product = () => (
+const Site = () => (
 	<>
 		<Header />
-		<Items />
+		<Item id={'1'}></Item>
 		<Footer />
 	</>
 );
 
-export default Product;
+export default Site;

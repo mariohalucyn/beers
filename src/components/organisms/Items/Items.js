@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Button from '../../atoms/Button/Button';
 import { fetchApi } from '../../../helpers/api';
+import { Link } from 'react-router-dom';
 
 const StyledWrapper = styled.div `
 	padding: 0;
@@ -68,9 +69,9 @@ const Items = () => {
 							<p>{brewers_tips}</p>
 							<div className={'price'}>
 								<h1>{abv}%</h1>
-								<a href="">
+								<Link to='/beer' id={id}>
 									<Button>buy</Button>
-								</a>
+								</Link>
 							</div>
 						</div>
 					</StyledListItem>
