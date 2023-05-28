@@ -1,65 +1,18 @@
 import React from 'react';
 import { fetchApi } from '../../../helpers/api';
-import styled from 'styled-components';
 import PropTypes from 'prop-types';
+import {
+	Description,
+	FoodList,
+	FoodListItem,
+	Image,
+	ImageDescription,
+	Overview,
+	StyledList,
+	StyledListItem,
+	StyledWrapper
+} from './Item.styles';
 
-const StyledWrapper = styled.div `
-	padding: 72px;
-`;
-
-const StyledList = styled.ul `
-	list-style-type: none;
-	width: 1200px;
-	padding: 0;
-	margin: 0 auto;
-`;
-
-const StyledListItem = styled.li`
-	display: flex;
-	flex-direction: column;
-	gap: 86px;
-`;
-
-const Overview = styled.div `
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-`;
-
-const Description = styled.div `
-	display: flex;
-	flex-direction: column;
-	
-	&::before {
-		content: '';
-		position: absolute;
-		width: 1200px;
-		height: 1px;
-		background-color: ${({ theme }) => theme.colors.gray};
-	}
-`;
-
-const Image = styled.div `
-	display: flex;
-	flex-direction: column;
-	margin: auto; 
-	
-	img {
-		height: 600px;
-	}
-`;
-
-const FoodList = styled.ul `
-	list-style-type: none;
-	padding: 0;
-`;
-
-const FoodListItem = styled.li ``;
-
-const ImageDescription = styled.div `
-	display: flex;
-	flex-direction: column;
-	gap: 32px;
-`;
 
 const Item = ({ id }) => {
 	const item = fetchApi(`https://api.punkapi.com/v2/beers/${id}`);

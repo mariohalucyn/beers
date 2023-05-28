@@ -1,46 +1,6 @@
 import React from 'react';
-import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-
-const StyledWrapper = styled.div `
-	margin: 0 auto;
-	display: flex;
-	flex-direction: column;
-	background-color: ${({ theme }) => theme.colors.lightGray};
-	
-	&::before {
-		content: '';
-		position: absolute;
-		width: 100%;
-		height: 1px;
-		background-color: ${({ theme }) => theme.colors.gray};
-	}
-`;
-
-const StyledList = styled.ul `
-	list-style-type: none;
-	height: 200px;
-	padding: 0 32px;
-	margin: 0;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	
-	@media(min-width: 1200px) {
-		width: 1200px;
-		margin: 0 auto;
-	}
-`;
-
-const StyledListItem = styled.li `
-	padding: 2px;
-	color: ${({ theme }) => theme.colors.black};
-	
-	a {
-		text-decoration: none;
-		color: ${({ theme }) => theme.colors.black};
-	}
-`;
+import { StyledList, StyledListItem, StyledWrapper } from './Footer.styles';
 
 const Footer = () => (
 	<StyledWrapper>
