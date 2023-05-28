@@ -11,7 +11,8 @@ import Items from '../components/organisms/Items/Items';
 import PrivacyPolicy from '../components/organisms/PrivacyPolicy/PrivacyPolicy';
 
 const StyledWrapper = styled.html `
-	color: ${({ theme }) => theme.colors.black}
+	color: ${({ theme }) => theme.colors.black};
+	background-color: ${({ theme }) => theme.colors.white};
 `;
 
 const Root = () => {
