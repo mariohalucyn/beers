@@ -9,11 +9,13 @@ const StyledButton = styled.button `
 	font-weight: bold;
 	color: ${({ theme }) => theme.colors.black};
 `;
-const Button = ({ children }) => (
-	<StyledButton>
-		{children}
-	</StyledButton>
-);
+const Button = ({ children }) => {
+	return (
+		<StyledButton>
+			{children}
+		</StyledButton>
+	);
+};
 
 Button.propTypes = {
 	children: PropTypes.string,

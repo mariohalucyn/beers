@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Button from '../../atoms/Button/Button';
 import { fetchApi } from '../../../helpers/api';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 const StyledWrapper = styled.div `
 	padding: 0;
@@ -52,9 +53,8 @@ const StyledListItem = styled.li `
     }
 `;
 
-const Items = () => {
+const Items = (props) => {
 	const beers = fetchApi('https://api.punkapi.com/v2/beers');
-
 	return (
 		<StyledWrapper>
 			<StyledList>
@@ -69,7 +69,7 @@ const Items = () => {
 							<p>{brewers_tips}</p>
 							<div className={'price'}>
 								<h1>{abv}%</h1>
-								<Link to='/beer' id={id}>
+								<Link onClick={() => props.func(id)} to='/beer'>
 									<Button>buy</Button>
 								</Link>
 							</div>
@@ -79,6 +79,10 @@ const Items = () => {
 			</StyledList>
 		</StyledWrapper>
 	);
+};
+
+Items.propTypes = {
+	func: PropTypes.func
 };
 
 export default Items;

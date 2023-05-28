@@ -14,15 +14,23 @@ const StyledWrapper = styled.html `
 `;
 
 const Root = () => {
+	const pullData = (data = '1') => data;
+
 	return (
 		<Router>
 			<ThemeProvider theme={theme}>
 				<Header />
 				<StyledWrapper>
 					<Routes>
-						<Route exact path='/' element={<Items />} />
-						<Route exact path='/beer' element={<Item id='2' />} />
-						<Route exact path='/privacy-policy' element={<PrivacyPolicy />} />
+						<Route exact path='/' element={
+							<Items func={pullData} />
+						} />
+						<Route exact path='/beer' element={
+							<Item id='2' />
+						} />
+						<Route exact path='/privacy-policy' element={
+							<PrivacyPolicy />
+						} />
 					</Routes>
 				</StyledWrapper>
 				<Footer />

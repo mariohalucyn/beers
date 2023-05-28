@@ -61,9 +61,8 @@ const ImageDescription = styled.div `
 	gap: 32px;
 `;
 
-const Item = (props) => {
-	const item = fetchApi(`https://api.punkapi.com/v2/beers/${props.id}`);
-
+const Item = ({ id }) => {
+	const item = fetchApi(`https://api.punkapi.com/v2/beers/${id}`);
 	return (
 		<StyledWrapper>
 			<StyledList>
