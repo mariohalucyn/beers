@@ -6,10 +6,10 @@ const Footer = () => (
 	<StyledWrapper>
 		<StyledList>
 			<StyledListItem>
-				<Link to='privacy-policy' >Privacy policy</Link>
+				<Link to='privacy-policy'>Privacy policy</Link>
 			</StyledListItem>
 			<StyledListItem>
-				<Link to='contact' >Contact</Link>
+				<Link to='contact'>Contact</Link>
 			</StyledListItem>
 		</StyledList>
 		<StyledList>

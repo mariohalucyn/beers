@@ -7,6 +7,7 @@ import { StyledList, StyledListItem, StyledWrapper } from './Items.styles';
 
 const Items = (props) => {
 	const beers = fetchApi('https://api.punkapi.com/v2/beers');
+
 	return (
 		<StyledWrapper>
 			<StyledList>
