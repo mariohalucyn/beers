@@ -17,7 +17,7 @@ export const StyledWrapper = styled.div `
 export const StyledList = styled.ul `
 	list-style-type: none;
 	height: 200px;
-    padding: 0;
+    padding: 0 24px;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;

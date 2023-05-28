@@ -14,8 +14,9 @@ export const StyledWrapper = styled.div `
 
 export const StyledList = styled.ul `
 	list-style-type: none;
-    height: 100px;
-    padding: 0;
+    height: 120px;
+    padding: 0 24px;
+    margin: 0;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
