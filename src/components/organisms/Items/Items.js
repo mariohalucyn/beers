@@ -22,7 +22,7 @@ const Items = (props) => {
 							<div className={'price'}>
 								<h1>{abv}%</h1>
 								<Link onClick={() => props.func(id)} to='/beer'>
-									<Button>buy</Button>
+									<Button>Read</Button>
 								</Link>
 							</div>
 						</div>

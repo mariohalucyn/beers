@@ -39,7 +39,7 @@ export const StyledListItem = styled.li `
 	
 	.logo {
 		text-decoration: none;
-		font-size: 26px;
+		font-size: 32px;
 		color: ${({ theme }) => theme.colors.black};
 	}
 `;
