@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { ReactComponent as Account } from '../../../assets/icons/account.svg';
+import { Link } from 'react-router-dom';
 
 const StyledWrapper = styled.div `
 	margin: 0 auto;
@@ -39,12 +40,20 @@ const StyledListItem = styled.li `
 		height: 32px;
 		fill: ${({ theme }) => theme.colors.black};
 	}
+	
+	.logo {
+		text-decoration: none;
+		font-size: 26px;
+		color: ${({ theme }) => theme.colors.black};
+	}
 `;
 
 const Header = () => (
 	<StyledWrapper>
 		<StyledList>
-			<StyledListItem>logo</StyledListItem>
+			<StyledListItem>
+				<Link className={'logo'} to='/'>Beers</Link>
+			</StyledListItem>
 			<StyledListItem>
 				<Account />
 			</StyledListItem>
