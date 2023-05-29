@@ -15,7 +15,9 @@ const Items = (props) => {
 				{beers.map(({ abv, brewers_tips, id, image_url, name, tagline }) => (
 					<StyledListItem key={id}>
 						<div>
-							<h1>{name}</h1>
+							<Link onClick={() => props.func(id)} to='/beer'>
+								<h1>{name}</h1>
+							</Link>
 							<h3>{tagline}</h3>
 						</div>
 						<img src={image_url} alt={name} />

@@ -16,7 +16,7 @@ const GlobalStyle = styled.html `
 `;
 
 const Root = () => {
-	const [state, setState] = useState('');
+	const [state, setState] = useState('1');
 	const pullData = (data) => {
 		setState(data);
 	};
@@ -27,10 +27,18 @@ const Root = () => {
 				<Header />
 				<GlobalStyle>
 					<Routes>
-						<Route exact path='/' element={<Items func={pullData} />} />
-						<Route exact path='/beer' element={<Item id={state} />} />
-						<Route exact path='/privacy-policy' element={<PrivacyPolicy />} />
-						<Route exact path='/contact' element={<Contact />} />
+						<Route exact path='/' element={
+							<Items func={pullData} />
+						} />
+						<Route exact path='/beer' element={
+							<Item id={state} />
+						} />
+						<Route exact path='/privacy-policy' element={
+							<PrivacyPolicy />
+						} />
+						<Route exact path='/contact' element={
+							<Contact />
+						} />
 					</Routes>
 				</GlobalStyle>
 				<Footer />
@@ -38,4 +46,5 @@ const Root = () => {
 		</Router>
 	);
 };
+
 export default Root;

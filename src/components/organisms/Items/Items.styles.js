@@ -42,4 +42,9 @@ export const StyledListItem = styled.li `
 		width: 80px;
 		margin: auto;
     }
+  
+    a {
+        text-decoration: none;
+        color: ${({ theme }) => theme.colors.black};
+    }
 `;

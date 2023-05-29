@@ -11,7 +11,7 @@ export const StyledList = styled.ul `
 `;
 
 export const StyledListItem = styled.li`
-    padding: 0;
+    padding: 48px 0;
     margin: 0 auto;
 	display: flex;
 	flex-direction: column;
@@ -19,7 +19,8 @@ export const StyledListItem = styled.li`
 `;
 
 export const Overview = styled.div `
-	display: grid;
+    position: relative;	
+    display: grid;
 	grid-template-columns: 1fr;
 
     @media (min-width: 768px) {
@@ -30,9 +31,9 @@ export const Overview = styled.div `
 `;
 
 export const Description = styled.div `
-	display: flex;
-	flex-direction: column;
-    position: relative;
+      position: relative;
+      display: flex;
+      flex-direction: column;
 	
 	&::before {
 		content: '';
@@ -46,8 +47,8 @@ export const Description = styled.div `
 export const Image = styled.div `
 	display: flex;
 	flex-direction: column;
-	margin: auto; 
-	
+	margin: auto;
+  
 	img {
 		max-height: 400px;
 	}
