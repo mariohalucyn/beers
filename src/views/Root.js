@@ -16,6 +16,7 @@ const GlobalStyle = styled.html`
   display: flex;
   min-height: calc(100vh - 500px);
   // calc using 100 viewport height and total height of header and footer that's way to fix footer on bottom
+  // 500px - header and footer
 `
 
 const Root = () => {
