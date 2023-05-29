@@ -13,6 +13,8 @@ import PrivacyPolicy from '../components/organisms/PrivacyPolicy/PrivacyPolicy';
 const GlobalStyle = styled.html `
 	color: ${({ theme }) => theme.colors.black};
 	background-color: ${({ theme }) => theme.colors.white};
+	min-height: calc(100vh - 500px);
+	display: flex;
 `;
 
 const Root = () => {

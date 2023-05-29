@@ -14,7 +14,7 @@ export const StyledWrapper = styled.div `
 
 export const StyledList = styled.ul `
 	list-style-type: none;
-    height: 120px;
+    height: 100px;
     padding: 0 24px;
     margin: 0;
 	display: flex;
@@ -40,7 +40,7 @@ export const StyledListItem = styled.li `
 	
 	.logo {
 		text-decoration: none;
-		font-size: 32px;
+		font-size: 28px;
 		color: ${({ theme }) => theme.colors.black};
 	}
 `;

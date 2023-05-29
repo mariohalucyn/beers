@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const StyledList = styled.ul `
 	list-style-type: none;
-	padding: 24px;
+	padding: 0;
 	margin: 0 auto;
 
   @media (min-width: 1200px) {
@@ -11,7 +11,7 @@ export const StyledList = styled.ul `
 `;
 
 export const StyledListItem = styled.li`
-    padding: 48px 0;
+    padding: 0;
     margin: 0 auto;
 	display: flex;
 	flex-direction: column;
