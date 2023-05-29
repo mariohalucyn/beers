@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyledWrapper } from './PrivacyPolicy.styles';
+import { StyledWrapper } from '../../atoms/StyledWrapper';
 
 const PrivacyPolicy = () => (
 	<StyledWrapper>

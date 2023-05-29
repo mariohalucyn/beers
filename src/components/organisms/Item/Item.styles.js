@@ -1,9 +1,5 @@
 import styled from 'styled-components';
 
-export const StyledWrapper = styled.div `
-    padding: 32px 0;
-`;
-
 export const StyledList = styled.ul `
 	list-style-type: none;
 	padding: 24px;

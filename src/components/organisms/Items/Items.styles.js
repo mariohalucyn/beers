@@ -1,12 +1,5 @@
 import styled from 'styled-components';
 
-export const StyledWrapper = styled.div `
-    padding: 72px 24px;
-  
-  @media (min-width: 1200px) {
-    padding: 72px 0;
-  }
-`;
 
 export const StyledList = styled.ul `
 	max-width: 400px;

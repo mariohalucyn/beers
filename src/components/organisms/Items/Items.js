@@ -3,7 +3,8 @@ import Button from '../../atoms/Button/Button';
 import { fetchApi } from '../../../helpers/api';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import { StyledList, StyledListItem, StyledWrapper } from './Items.styles';
+import { StyledList, StyledListItem } from './Items.styles';
+import { StyledWrapper } from '../../atoms/StyledWrapper';
 
 const Items = (props) => {
 	const beers = fetchApi('https://api.punkapi.com/v2/beers');

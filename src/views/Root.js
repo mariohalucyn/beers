@@ -10,7 +10,7 @@ import Item from '../components/organisms/Item/Item';
 import Items from '../components/organisms/Items/Items';
 import PrivacyPolicy from '../components/organisms/PrivacyPolicy/PrivacyPolicy';
 
-const StyledWrapper = styled.html `
+const GlobalStyle = styled.html `
 	color: ${({ theme }) => theme.colors.black};
 	background-color: ${({ theme }) => theme.colors.white};
 `;
@@ -25,14 +25,14 @@ const Root = () => {
 		<Router>
 			<ThemeProvider theme={theme}>
 				<Header />
-				<StyledWrapper>
+				<GlobalStyle>
 					<Routes>
 						<Route exact path='/' element={<Items func={pullData} />} />
 						<Route exact path='/beer' element={<Item id={state} />} />
 						<Route exact path='/privacy-policy' element={<PrivacyPolicy />} />
 						<Route exact path='/contact' element={<Contact />} />
 					</Routes>
-				</StyledWrapper>
+				</GlobalStyle>
 				<Footer />
 			</ThemeProvider>
 		</Router>
