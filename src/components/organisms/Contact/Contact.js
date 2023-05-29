@@ -1,7 +1,10 @@
-import React from 'react';
+import React from 'react'
+import { StyledWrapper } from '../../atoms/StyledWrapper'
 
 const Contact = () => (
-	<h1>Contact</h1>
-);
+  <StyledWrapper>
+    <h1>Contact</h1>
+  </StyledWrapper>
+)
 
-export default Contact;
+export default Contact
