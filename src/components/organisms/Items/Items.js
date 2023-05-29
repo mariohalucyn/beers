@@ -13,6 +13,7 @@ const Items = (props) => {
 		<StyledWrapper>
 			<StyledList>
 				{beers.map(({ abv, brewers_tips, id, image_url, name, tagline }) => (
+					// destructuring all necessary fields
 					<StyledListItem key={id}>
 						<div>
 							<Link onClick={() => props.func(id)} to='/beer'>

@@ -5,6 +5,7 @@ import { StyledButton } from './Button.styles';
 const Button = ({ children }) => (
 	<StyledButton>
 		{children}
+		{/*button can gets text from inside and manipulate it*/}
 	</StyledButton>
 );
 

@@ -7,6 +7,7 @@ const Header = () => (
 		<StyledList>
 			<StyledListItem>
 				<Link className={'logo'} to='/'>Beers</Link>
+				{/*class logo is just text with link to main site*/}
 			</StyledListItem>
 		</StyledList>
 	</StyledWrapper>

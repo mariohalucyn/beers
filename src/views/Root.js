@@ -15,13 +15,16 @@ const GlobalStyle = styled.html `
 	background-color: ${({ theme }) => theme.colors.white};
 	display: flex;
 	min-height: calc(100vh - 500px);
+	// calc using 100 viewport height and total height of header and footer that's way to fix footer on bottom
 `;
 
 const Root = () => {
 	const [state, setState] = useState('1');
+	// potential issue about initial state when user will refresh browser
 	const pullData = (data) => {
 		setState(data);
 	};
+	// pullData function is downloading data from another component with using `func={pullData}`
 
 	return (
 		<Router>

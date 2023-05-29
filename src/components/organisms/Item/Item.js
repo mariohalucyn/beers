@@ -15,11 +15,13 @@ import {
 
 const Item = ({ id }) => {
 	const item = fetchApi(`https://api.punkapi.com/v2/beers/${id}`);
+	// api using id in link, that's the simplest way to manipulate beers
 	
 	return (
 		<StyledWrapper>
 			<StyledList>
 				{item.map(({ abv, brewers_tips, contributed_by, description, first_brewed, food_pairing, id, image_url, name, tagline }) => (
+					// destructuring all necessary fields
 					<StyledListItem key={id}>
 						<Overview>
 							<Image>
@@ -36,6 +38,7 @@ const Item = ({ id }) => {
 									<h2>PAIRING FOOD</h2>
 									<FoodList>
 										{food_pairing.map((food) => (
+											// mapping food to unordered list
 											<FoodListItem key={food_pairing}>{food}</FoodListItem>
 										))}
 									</FoodList>

@@ -2,7 +2,8 @@ import styled from 'styled-components';
 
 export const StyledWrapper = styled.div `
 	background-color: ${({ theme }) => theme.colors.lightGray};
-
+    position: relative;
+  
 	&::after {
 		content: '';
 		position: absolute;

@@ -3,6 +3,7 @@ import { StyledWrapper } from '../../atoms/StyledWrapper';
 
 const PrivacyPolicy = () => (
 	<StyledWrapper>
+		{/*privacy policy was copied from another site*/}
 		<h1>Why we process your information</h1>
 
 		<p>We generally process your information when we need to do so to fulfill a contractual obligation (for example, to process your subscription payments to use the Beers platform), or where we or someone we work with needs to use your personal information for a reason related to their business (for example, to provide you with a service). Laws in the European Economic Area (“EEA”) and in the United Kingdom (“UK”) call these reasons “legitimate interests.” These “legitimate interests” include:</p>
