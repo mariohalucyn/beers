@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const StyledWrapper = styled.div `
-    padding: 72px 0;
+    padding: 32px 0;
 `;
 
 export const StyledList = styled.ul `
@@ -16,7 +16,7 @@ export const StyledList = styled.ul `
 
 export const StyledListItem = styled.li`
     padding: 0;
-    margin: 0;
+    margin: 0 auto;
 	display: flex;
 	flex-direction: column;
     gap: 48px;

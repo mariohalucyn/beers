@@ -1,11 +1,17 @@
 import styled from 'styled-components';
 
-export const StyledWrapper = styled.div ``;
+export const StyledWrapper = styled.div `
+    padding: 72px 24px;
+  
+  @media (min-width: 1200px) {
+    padding: 72px 0;
+  }
+`;
 
 export const StyledList = styled.ul `
 	max-width: 400px;
-	padding: 64px 24px;
-	margin: auto;
+    padding: 0;
+	margin: 0 auto;
 	list-style-type: none;
 	display: grid;
 	grid-template-columns: 1fr;
@@ -14,7 +20,6 @@ export const StyledList = styled.ul `
 	
 	@media (min-width: 768px) {
 		max-width: 800px;
-        padding: 64px 0;
 		grid-template-columns: repeat(2, 1fr);
 	}
 	
