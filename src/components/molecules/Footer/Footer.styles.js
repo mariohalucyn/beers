@@ -4,6 +4,7 @@ export const StyledWrapper = styled.div `
 	display: flex;
 	flex-direction: column;
 	background-color: ${({ theme }) => theme.colors.lightGray};
+    margin-top: auto;
 	
 	&::before {
 		content: '';

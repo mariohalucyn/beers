@@ -1,6 +1,7 @@
 import React from 'react';
 import { fetchApi } from '../../../helpers/api';
 import PropTypes from 'prop-types';
+import { StyledWrapper } from '../../atoms/StyledWrapper';
 import {
 	Description,
 	FoodList,
@@ -10,9 +11,7 @@ import {
 	Overview,
 	StyledList,
 	StyledListItem,
-	StyledWrapper
 } from './Item.styles';
-
 
 const Item = ({ id }) => {
 	const item = fetchApi(`https://api.punkapi.com/v2/beers/${id}`);

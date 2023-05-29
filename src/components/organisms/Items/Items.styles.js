@@ -1,12 +1,5 @@
 import styled from 'styled-components';
 
-export const StyledWrapper = styled.div `
-    padding: 72px 24px;
-  
-  @media (min-width: 1200px) {
-    padding: 72px 0;
-  }
-`;
 
 export const StyledList = styled.ul `
 	max-width: 400px;
@@ -48,5 +41,10 @@ export const StyledListItem = styled.li `
 	img {
 		width: 80px;
 		margin: auto;
+    }
+  
+    a {
+        text-decoration: none;
+        color: ${({ theme }) => theme.colors.black};
     }
 `;
