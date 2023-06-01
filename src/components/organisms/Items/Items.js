@@ -7,32 +7,37 @@ import { StyledList, StyledListItem } from './Items.styles'
 import { StyledWrapper } from '../../atoms/StyledWrapper'
 
 const Items = (props) => {
-  const beers = fetchApi('https://api.punkapi.com/v2/beers')
+  const data = fetchApi('https://api.punkapi.com/v2/beers')
+  const sortedBeers = data.sort((a, b) => (a > b ? -1 : 1))
+
+  console.log(sortedBeers)
 
   return (
     <StyledWrapper>
       <StyledList>
-        {beers.map(({ abv, brewers_tips, id, image_url, name, tagline }) => (
-          // destructuring all necessary fields
-          <StyledListItem key={id}>
-            <div>
-              <Link onClick={() => props.func(id)} to="/beer">
-                <h1>{name}</h1>
-              </Link>
-              <h3>{tagline}</h3>
-            </div>
-            <img src={image_url} alt={name} />
-            <div>
-              <p>{brewers_tips}</p>
-              <div className={'price'}>
-                <h1>{abv}%</h1>
+        {sortedBeers.map(
+          ({ abv, brewers_tips, id, image_url, name, tagline }) => (
+            // destructuring all necessary fields
+            <StyledListItem key={id}>
+              <div>
                 <Link onClick={() => props.func(id)} to="/beer">
-                  <Button>Read</Button>
+                  <h1>{name}</h1>
                 </Link>
+                <h3>{tagline}</h3>
               </div>
-            </div>
-          </StyledListItem>
-        ))}
+              <img src={image_url} alt={name} />
+              <div>
+                <p>{brewers_tips}</p>
+                <div className={'price'}>
+                  <h1>{abv}%</h1>
+                  <Link onClick={() => props.func(id)} to="/beer">
+                    <Button>Read</Button>
+                  </Link>
+                </div>
+              </div>
+            </StyledListItem>
+          )
+        )}
       </StyledList>
     </StyledWrapper>
   )
