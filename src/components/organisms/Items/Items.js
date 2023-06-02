@@ -7,9 +7,17 @@ import { StyledList, StyledListItem } from './Items.styles'
 import { StyledWrapper } from '../../atoms/StyledWrapper'
 import styled from 'styled-components'
 
+const StyledSelectDiv = styled.div`
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 4px;
+  padding-bottom: 16px;
+`
+
 const StyledSelect = styled.select`
-  margin: 0 0 20px 8px;
-  padding: 3px;
+  margin: 0;
+  padding: 0;
   color: ${({ theme }) => theme.colors.black};
 `
 
@@ -19,7 +27,7 @@ const Items = (props) => {
 
   return (
     <StyledWrapper>
-      <div>
+      <StyledSelectDiv>
         sort
         <StyledSelect defaultValue={'DEFAULT'}>
           <option value="DEFAULT" disabled>
@@ -28,7 +36,7 @@ const Items = (props) => {
           <option value="ascending">Ascending</option>
           <option value="descending">Descending</option>
         </StyledSelect>
-      </div>
+      </StyledSelectDiv>
 
       <StyledList>
         {data.map(({ abv, brewers_tips, id, image_url, name, tagline }) => (
