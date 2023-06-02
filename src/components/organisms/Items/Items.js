@@ -7,12 +7,20 @@ import { StyledList, StyledListItem } from './Items.styles'
 import { StyledWrapper } from '../../atoms/StyledWrapper'
 
 const Items = (props) => {
-  const beers = fetchApi('https://api.punkapi.com/v2/beers')
+  const [...data] = fetchApi('https://api.punkapi.com/v2/beers')
+  // const [sortState, setSortState] = useState('none')
 
   return (
     <StyledWrapper>
+      <select defaultValue={'DEFAULT'}>
+        <option value="DEFAULT" disabled>
+          None
+        </option>
+        <option value="ascending">Ascending</option>
+        <option value="descending">Descending</option>
+      </select>
       <StyledList>
-        {beers.map(({ abv, brewers_tips, id, image_url, name, tagline }) => (
+        {data.map(({ abv, brewers_tips, id, image_url, name, tagline }) => (
           // destructuring all necessary fields
           <StyledListItem key={id}>
             <div>
