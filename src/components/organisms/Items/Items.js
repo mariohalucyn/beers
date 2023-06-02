@@ -7,37 +7,40 @@ import { StyledList, StyledListItem } from './Items.styles'
 import { StyledWrapper } from '../../atoms/StyledWrapper'
 
 const Items = (props) => {
-  const data = fetchApi('https://api.punkapi.com/v2/beers')
-  const sortedBeers = data.sort((a, b) => (a > b ? -1 : 1))
-
-  console.log(sortedBeers)
+  const [...data] = fetchApi('https://api.punkapi.com/v2/beers')
+  // const [sortState, setSortState] = useState('none')
 
   return (
     <StyledWrapper>
+      <select defaultValue={'DEFAULT'}>
+        <option value="DEFAULT" disabled>
+          None
+        </option>
+        <option value="ascending">Ascending</option>
+        <option value="descending">Descending</option>
+      </select>
       <StyledList>
-        {sortedBeers.map(
-          ({ abv, brewers_tips, id, image_url, name, tagline }) => (
-            // destructuring all necessary fields
-            <StyledListItem key={id}>
-              <div>
+        {data.map(({ abv, brewers_tips, id, image_url, name, tagline }) => (
+          // destructuring all necessary fields
+          <StyledListItem key={id}>
+            <div>
+              <Link onClick={() => props.func(id)} to="/beer">
+                <h1>{name}</h1>
+              </Link>
+              <h3>{tagline}</h3>
+            </div>
+            <img src={image_url} alt={name} />
+            <div>
+              <p>{brewers_tips}</p>
+              <div className={'price'}>
+                <h1>{abv}%</h1>
                 <Link onClick={() => props.func(id)} to="/beer">
-                  <h1>{name}</h1>
+                  <Button>Read</Button>
                 </Link>
-                <h3>{tagline}</h3>
               </div>
-              <img src={image_url} alt={name} />
-              <div>
-                <p>{brewers_tips}</p>
-                <div className={'price'}>
-                  <h1>{abv}%</h1>
-                  <Link onClick={() => props.func(id)} to="/beer">
-                    <Button>Read</Button>
-                  </Link>
-                </div>
-              </div>
-            </StyledListItem>
-          )
-        )}
+            </div>
+          </StyledListItem>
+        ))}
       </StyledList>
     </StyledWrapper>
   )
