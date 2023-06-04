@@ -15,12 +15,6 @@ const Contact = () => (
           and this is example of site you can make with this framework (or
           actually library)
         </p>
-        <ul>
-          links to my socials
-          <li>https://github.com/mariohalucyn</li>
-          <li></li>
-          <li></li>
-        </ul>
       </div>
       <div>
         <img src={Mushroom} alt="mushroom profile picture" />

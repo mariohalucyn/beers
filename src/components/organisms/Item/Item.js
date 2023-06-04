@@ -14,13 +14,13 @@ import {
 } from './Item.styles'
 
 const Item = ({ id }) => {
-  const item = fetchApi(`https://api.punkapi.com/v2/beers/${id}`)
+  const [...item] = fetchApi(`https://api.punkapi.com/v2/beers/${id}`)
   // api using id in link, that's the simplest way to manipulate beers
 
   return (
     <StyledWrapper>
       <StyledList>
-        {item.map(
+        {[...item].map(
           ({
             abv,
             brewers_tips,
