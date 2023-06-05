@@ -9,14 +9,13 @@ import Header from '../components/molecules/Header/Header'
 import Item from '../components/organisms/Item/Item'
 import Items from '../components/organisms/Items/Items'
 import PrivacyPolicy from '../components/organisms/PrivacyPolicy/PrivacyPolicy'
+import { GlobalStyle } from '../assets/themes/globalStyles'
 
-const GlobalStyle = styled.html`
+const StyledWrapper = styled.div`
   color: ${({ theme }) => theme.colors.black};
   background-color: ${({ theme }) => theme.colors.white};
   display: flex;
   min-height: calc(100vh - 500px);
-  // calc using 100 viewport height and total height of header and footer that's way to fix footer on bottom
-  // 500px - header and footer
 `
 
 const Root = () => {
@@ -29,16 +28,17 @@ const Root = () => {
 
   return (
     <Router>
+      <GlobalStyle />
       <ThemeProvider theme={theme}>
         <Header />
-        <GlobalStyle>
+        <StyledWrapper>
           <Routes>
             <Route exact path="/" element={<Items func={pullData} />} />
             <Route exact path="/beer" element={<Item id={state} />} />
             <Route exact path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route exact path="/contact" element={<Contact />} />
           </Routes>
-        </GlobalStyle>
+        </StyledWrapper>
         <Footer />
       </ThemeProvider>
     </Router>
