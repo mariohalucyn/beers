@@ -22,7 +22,9 @@ const Items = (props) => {
                 </Link>
                 <h3>{tagline}</h3>
               </div>
-              <img src={image_url} alt={name} />
+              <Link className="image" onClick={() => props.func(id)} to="/beer">
+                <img src={image_url} alt={name} />
+              </Link>
               <div>
                 <p>{brewers_tips}</p>
                 <div className={'price'}>

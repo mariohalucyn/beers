@@ -37,9 +37,14 @@ export const StyledListItem = styled.li`
     align-items: center;
   }
 
-  img {
+  .image {
     width: 80px;
     margin: auto;
+
+    img {
+      width: 80px;
+      margin: auto;
+    }
   }
 
   a {
