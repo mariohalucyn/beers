@@ -21,6 +21,7 @@ export const StyledList = styled.ul`
   }
 
   li {
+    margin: 0 auto;
     padding: 24px;
     display: flex;
     flex-direction: column;
