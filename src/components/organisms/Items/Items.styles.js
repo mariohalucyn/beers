@@ -19,36 +19,36 @@ export const StyledList = styled.ul`
     max-width: 1200px;
     grid-template-columns: repeat(3, 1fr);
   }
-`
 
-export const StyledListItem = styled.li`
-  padding: 24px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 24px;
-  border-radius: 20px;
-  background-color: ${({ theme }) => theme.colors.lightGray};
-  box-shadow: 3px 5px 15px rgba(0, 0, 0, 0.15);
-
-  .price {
+  li {
+    padding: 24px;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    align-items: center;
-  }
+    gap: 24px;
+    border-radius: 20px;
+    background-color: ${({ theme }) => theme.colors.lightGray};
+    box-shadow: 3px 5px 15px rgba(0, 0, 0, 0.15);
 
-  .image {
-    width: 80px;
-    margin: auto;
+    .price {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
-    img {
+    .image {
       width: 80px;
       margin: auto;
-    }
-  }
 
-  a {
-    text-decoration: none;
-    color: ${({ theme }) => theme.colors.black};
+      img {
+        width: 80px;
+        margin: auto;
+      }
+    }
+
+    a {
+      text-decoration: none;
+      color: ${({ theme }) => theme.colors.black};
+    }
   }
 `

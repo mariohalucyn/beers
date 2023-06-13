@@ -3,7 +3,7 @@ import Button from '../../atoms/Button/Button'
 import { fetchApi } from '../../../helpers/api'
 import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types'
-import { StyledList, StyledListItem } from './Items.styles'
+import { StyledList } from './Items.styles'
 import { StyledWrapper } from '../../atoms/StyledWrapper'
 
 const Items = (props) => {
@@ -15,7 +15,7 @@ const Items = (props) => {
         {[...data].map(
           ({ abv, brewers_tips, id, image_url, name, tagline }) => (
             // destructuring all necessary fields
-            <StyledListItem key={id}>
+            <li key={id}>
               <div>
                 <Link onClick={() => props.func(id)} to="/beer">
                   <h1>{name}</h1>
@@ -34,7 +34,7 @@ const Items = (props) => {
                   </Link>
                 </div>
               </div>
-            </StyledListItem>
+            </li>
           )
         )}
       </StyledList>
