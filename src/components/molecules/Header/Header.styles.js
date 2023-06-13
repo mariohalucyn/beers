@@ -26,22 +26,22 @@ export const StyledList = styled.ul`
     width: 1200px;
     margin: auto;
   }
-`
 
-export const StyledListItem = styled.li`
-  font-size: 20px;
-  font-weight: bold;
-  color: ${({ theme }) => theme.colors.black};
-
-  svg {
-    width: 32px;
-    height: 32px;
-    fill: ${({ theme }) => theme.colors.black};
-  }
-
-  .logo {
-    text-decoration: none;
-    font-size: 28px;
+  li {
+    font-size: 20px;
+    font-weight: bold;
     color: ${({ theme }) => theme.colors.black};
+
+    svg {
+      width: 32px;
+      height: 32px;
+      fill: ${({ theme }) => theme.colors.black};
+    }
+
+    a {
+      text-decoration: none;
+      font-size: 28px;
+      color: ${({ theme }) => theme.colors.black};
+    }
   }
 `

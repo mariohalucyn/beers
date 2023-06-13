@@ -27,13 +27,13 @@ export const StyledList = styled.ul`
     width: 1200px;
     margin: auto;
   }
-`
 
-export const StyledListItem = styled.li`
-  color: ${({ theme }) => theme.colors.black};
-
-  a {
-    text-decoration: none;
+  li {
     color: ${({ theme }) => theme.colors.black};
+
+    a {
+      text-decoration: none;
+      color: ${({ theme }) => theme.colors.black};
+    }
   }
 `

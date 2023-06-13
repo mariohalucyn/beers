@@ -5,12 +5,10 @@ import { StyledWrapper } from '../../atoms/StyledWrapper'
 import {
   Description,
   FoodList,
-  FoodListItem,
   Image,
   ImageDescription,
   Overview,
   StyledList,
-  StyledListItem,
 } from './Item.styles'
 
 const Item = ({ id }) => {
@@ -34,7 +32,7 @@ const Item = ({ id }) => {
             tagline,
           }) => (
             // destructuring all necessary fields
-            <StyledListItem key={id}>
+            <li key={id}>
               <Overview>
                 <Image>
                   <img src={image_url} alt={name} />
@@ -53,7 +51,7 @@ const Item = ({ id }) => {
                     <FoodList>
                       {food_pairing.map((food) => (
                         // mapping food to unordered list
-                        <FoodListItem key={food_pairing}>{food}</FoodListItem>
+                        <li key={food_pairing}>{food}</li>
                       ))}
                     </FoodList>
                   </div>
@@ -65,7 +63,7 @@ const Item = ({ id }) => {
                 <h1>DESCRIPTION</h1>
                 <p>{description}</p>
               </Description>
-            </StyledListItem>
+            </li>
           )
         )}
       </StyledList>

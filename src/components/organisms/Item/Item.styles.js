@@ -8,14 +8,14 @@ export const StyledList = styled.ul`
   @media (min-width: 1200px) {
     max-width: 1200px;
   }
-`
 
-export const StyledListItem = styled.li`
-  padding: 0;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 48px;
+  li {
+    padding: 0;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+  }
 `
 
 export const Overview = styled.div`
@@ -60,8 +60,6 @@ export const FoodList = styled.ul`
   padding: 0;
   margin: 0;
 `
-
-export const FoodListItem = styled.li``
 
 export const ImageDescription = styled.div`
   display: flex;

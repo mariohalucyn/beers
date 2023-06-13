@@ -1,21 +1,21 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { StyledList, StyledListItem, StyledWrapper } from './Footer.styles'
+import { StyledList, StyledWrapper } from './Footer.styles'
 
 const Footer = () => (
   <StyledWrapper>
     <StyledList>
-      <StyledListItem>
+      <li>
         <Link to="privacy-policy">Privacy policy</Link>
-      </StyledListItem>
-      <StyledListItem>
+      </li>
+      <li>
         <Link to="contact">Contact</Link>
-      </StyledListItem>
+      </li>
     </StyledList>
     <StyledList>
-      <StyledListItem>
+      <li>
         <strong>© 2023 Beers</strong>
-      </StyledListItem>
+      </li>
     </StyledList>
   </StyledWrapper>
 )
