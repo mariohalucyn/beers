@@ -15,7 +15,8 @@ const StyledWrapper = styled.div`
   color: ${({ theme }) => theme.colors.black};
   background-color: ${({ theme }) => theme.colors.white};
   display: flex;
-  min-height: calc(100vh - 500px);
+  flex-direction: column;
+  justify-content: space-between;
 `
 
 const Root = () => {
@@ -28,18 +29,20 @@ const Root = () => {
 
   return (
     <Router>
-      <GlobalStyle />
       <ThemeProvider theme={theme}>
-        <Header />
+        <GlobalStyle />
         <StyledWrapper>
-          <Routes>
-            <Route exact path="/" element={<Items func={pullData} />} />
-            <Route exact path="/beer" element={<Item id={state} />} />
-            <Route exact path="/privacy-policy" element={<PrivacyPolicy />} />
-            <Route exact path="/contact" element={<Contact />} />
-          </Routes>
+          <div>
+            <Header />
+            <Routes>
+              <Route exact path="/" element={<Items func={pullData} />} />
+              <Route exact path="/beer" element={<Item id={state} />} />
+              <Route exact path="/privacy-policy" element={<PrivacyPolicy />} />
+              <Route exact path="/contact" element={<Contact />} />
+            </Routes>
+          </div>
+          <Footer />
         </StyledWrapper>
-        <Footer />
       </ThemeProvider>
     </Router>
   )
