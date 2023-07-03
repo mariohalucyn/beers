@@ -11,8 +11,10 @@ export const GlobalStyle = createGlobalStyle`
   }
   
   body {
+    color: ${({ theme }) => theme.colors.black};
   }
   
   a, button {
+    color: ${({ theme }) => theme.colors.black};
   }
 `
